@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import {
   Moon, Sun, Menu, X, Code2, Database, BarChart3, Mail,
   MessageCircle, ExternalLink, ChevronDown, Check, Layers,
-  Server, Globe, ArrowRight, Zap, Shield, Star, Phone,
+  Server, Globe, ArrowRight, Zap, Shield, Star, Phone, Sparkles,
 } from "lucide-react";
 import Carousel from "./src/Carousel.jsx";
 
@@ -15,27 +15,27 @@ const T = {
       services: "Services", contact: "Contact", cta: "Free Consult",
     },
     hero: {
-      badge: "🚀 Professional Dev Team · CRM & ERP Experts",
+      badge: "🚀 Professional Dev Team · AI-Era System Builders",
       line1: "Build Intelligent",
       line2: "Digital Systems",
-      sub: "A professional development team specialized in CRM & ERP — helping SMBs automate workflows, streamline operations, and grow with technology.",
+      sub: "A professional development team building intelligent systems in the AI era — CRM, ERP, AI-powered platforms, custom software, and beyond. We help businesses grow with technology.",
       cta1: "View Our Work", cta2: "Free Consultation",
-      stat1v: "5+", stat1l: "Years Exp.",
+      stat1v: "15+", stat1l: "Years Exp.",
       stat2v: "20+", stat2l: "Projects",
       stat3v: "98%", stat3l: "Satisfaction",
       scroll: "Scroll down",
     },
     about: {
-      tag: "ABOUT US", title: "Kelvin Peng Dev Team",
-      bio1: "We are a 5–10 person professional development team specialized in enterprise CRM and ERP customization. Our team spans frontend, backend, database, UI design, product, and project management — having delivered 20+ digitalization systems for manufacturing, retail, and trading SMBs.",
-      bio2: "From business research and architecture design through agile development to deployment and long-term iteration, we deliver end-to-end engineering services that help SMBs complete digital transformation in 1–3 months, with technology truly driving business growth.",
+      tag: "ABOUT US", title: "Our Development Team",
+      bio1: "We are a 5–10 person professional development team building intelligent digital systems in the AI era. Our work spans CRM, ERP, AI-powered applications, custom platforms, internal tools, and beyond — covering frontend, backend, database, AI integration, UI design, and project management.",
+      bio2: "From business research and architecture design through agile development, AI integration, deployment, and long-term iteration, we deliver end-to-end engineering services that help businesses complete digital transformation in 1–3 months, with technology truly driving growth.",
       available: "Available ✓",
-      tags: ["Full-Stack Dev", "Team Collaboration", "System Architecture", "Database Design", "API Integration", "Cloud Deploy"],
+      tags: ["Full-Stack Dev", "AI Integration", "Team Collaboration", "System Architecture", "Database Design", "Cloud Deploy"],
     },
     skills: {
       tag: "SKILLS", title: "Tech Stack",
-      sub: "Years of full-stack experience covering frontend, backend, databases and DevOps.",
-      cats: ["Frontend", "Backend", "Database", "Tooling"],
+      sub: "Full-stack capabilities covering frontend, backend, databases, AI integration, and DevOps.",
+      cats: ["Frontend", "Backend", "Database", "AI / LLM", "Tooling"],
     },
     portfolio: {
       tag: "PORTFOLIO", title: "Case Studies",
@@ -112,27 +112,27 @@ const T = {
       services: "服务", contact: "联系", cta: "免费咨询",
     },
     hero: {
-      badge: "🚀 专业开发团队 · CRM / ERP 系统专家",
+      badge: "🚀 专业开发团队 · AI 时代系统构建者",
       line1: "为您的业务构建",
       line2: "智能数字化系统",
-      sub: "专业开发团队，专注 CRM · ERP 系统定制开发，帮助中小企业实现流程自动化，用技术驱动业务增长。",
+      sub: "专业开发团队，在 AI 时代为企业构建各类智能化系统：CRM、ERP、AI 驱动应用、定制平台等，用技术驱动业务增长。",
       cta1: "查看作品案例", cta2: "免费咨询",
-      stat1v: "5+", stat1l: "年开发经验",
+      stat1v: "15+", stat1l: "年开发经验",
       stat2v: "20+", stat2l: "交付项目",
       stat3v: "98%", stat3l: "客户满意度",
       scroll: "向下了解",
     },
     about: {
-      tag: "关于我们", title: "Kelvin Peng 开发团队",
-      bio1: "我们是一支 5–10 人规模的专业开发团队，深耕企业级 CRM 与 ERP 系统定制开发，成员涵盖前端、后端、数据库、UI 设计、产品与项目管理等完整角色。已为制造、零售、贸易等行业的中小企业交付 20+ 套数字化系统。",
-      bio2: "从业务调研、架构设计、敏捷开发到上线运维与长期迭代，我们以工程化标准提供端到端服务，帮助客户在 1–3 个月内完成数字化转型，让技术真正服务于业务增长。",
+      tag: "关于我们", title: "我们的开发团队",
+      bio1: "我们是一支 5–10 人规模的专业开发团队，在 AI 时代专注于为企业构建各类智能化数字系统：CRM、ERP、AI 驱动应用、定制化平台、内部工具等。团队覆盖前端、后端、数据库、AI 集成、UI 设计与项目管理等完整角色。",
+      bio2: "从业务调研、架构设计、敏捷开发、AI 能力集成到上线运维与长期迭代，我们以工程化标准提供端到端服务，帮助客户在 1–3 个月内完成数字化转型，让技术真正服务于业务增长。",
       available: "接单中 ✓",
-      tags: ["全栈开发", "团队协作", "系统架构", "数据库设计", "API 集成", "云端部署"],
+      tags: ["全栈开发", "AI 集成", "团队协作", "系统架构", "数据库设计", "云端部署"],
     },
     skills: {
       tag: "技能", title: "技术栈",
-      sub: "多年积累的全栈开发能力，覆盖前端、后端、数据库与运维。",
-      cats: ["前端", "后端", "数据库", "工具链"],
+      sub: "全栈开发能力，覆盖前端、后端、数据库、AI 集成与运维。",
+      cats: ["前端", "后端", "数据库", "AI / 大模型", "工具链"],
     },
     portfolio: {
       tag: "作品", title: "案例展示",
@@ -207,10 +207,11 @@ const T = {
 // ─── STATIC DATA ──────────────────────────────────────────────────────────────
 
 const SKILL_ITEMS = [
-  { icon: <Globe size={18} />, items: ["React", "Vue.js", "TypeScript", "Tailwind CSS", "HTML/CSS"] },
-  { icon: <Server size={18} />, items: ["Node.js", "Python", "PHP/Laravel", "REST API", "GraphQL"] },
+  { icon: <Globe size={18} />,    items: ["React", "Vue.js", "TypeScript", "Tailwind CSS", "HTML/CSS"] },
+  { icon: <Server size={18} />,   items: ["Node.js", "Python", "PHP/Laravel", "REST API", "GraphQL"] },
   { icon: <Database size={18} />, items: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Prisma ORM"] },
-  { icon: <Layers size={18} />, items: ["Docker", "Git", "Linux", "Nginx", "AWS / Vercel"] },
+  { icon: <Sparkles size={18} />, items: ["OpenAI / Claude API", "LangChain", "RAG / Vector DB", "Fine-tuning", "MCP / Agents"] },
+  { icon: <Layers size={18} />,   items: ["Docker", "Git", "Linux", "Nginx", "AWS / Vercel"] },
 ];
 
 const PROJECT_META = [
@@ -799,8 +800,8 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     document.title = lang === "zh"
-      ? "Kelvin Peng · CRM 与 ERP 开发团队"
-      : "Kelvin Peng · CRM & ERP Development Team";
+      ? "Kelvin Peng · AI 时代系统开发团队"
+      : "Kelvin Peng · AI-Era System Development Team";
   }, [lang]);
 
   return (
@@ -822,7 +823,7 @@ export default function App() {
         .section-title { font-size: clamp(26px, 4vw, 40px); }
         .two-col { display: grid; grid-template-columns: 1fr 1.4fr; gap: 52px; align-items: center; }
         .two-col-equal { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-        .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
         .contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
 
