@@ -1,59 +1,1119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelvin Peng · AI-Era System Development Team</title>
-    <meta name="description" content="A 5–10 person professional development team led by Kelvin Peng, building intelligent digital systems in the AI era — CRM, ERP, AI-powered applications, custom platforms, and beyond. End-to-end delivery." />
-    <meta name="keywords" content="AI development, CRM development, ERP development, custom software, AI integration, LLM applications, digital transformation, development team, Kelvin Peng" />
-    <meta name="author" content="Kelvin Peng" />
-    <meta name="theme-color" content="#6366f1" />
-    <link rel="canonical" href="https://kelvinpeng.com/" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelvin Peng | Custom Business Systems &amp; AI Automation</title>
+  <meta name="description" content="We build custom ERP, CRM, and AI-powered systems that help businesses streamline operations and grow faster. Based in Malaysia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ─────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kelvinpeng.com/" />
-    <meta property="og:title" content="Kelvin Peng · AI-Era System Development Team" />
-    <meta property="og:description" content="Professional development team building intelligent digital systems in the AI era — CRM, ERP, AI applications, custom platforms. End-to-end delivery." />
-    <meta property="og:image" content="https://kelvinpeng.com/og-cover.jpg" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="zh_CN" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Kelvin Peng · AI-Era System Development Team" />
-    <meta name="twitter:description" content="AI-era system development — CRM, ERP, AI applications, custom platforms." />
-    <meta name="twitter:image" content="https://kelvinpeng.com/og-cover.jpg" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.ico" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kelvin Peng",
-      "url": "https://kelvinpeng.com",
-      "email": "contact@kelvinpeng.com",
-      "jobTitle": "Founder & Lead Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Kelvin Peng Development Team",
-        "url": "https://kelvinpeng.com"
-      },
-      "knowsAbout": ["AI Integration", "LLM Applications", "CRM Development", "ERP Development", "Full-Stack Engineering", "System Architecture"]
+    :root {
+      --bg:       #0a0a0a;
+      --bg2:      #111111;
+      --bg3:      #1a1a1a;
+      --border:   rgba(255,255,255,0.07);
+      --text:     #ffffff;
+      --text2:    #888888;
+      --text3:    #444444;
+      --accent:   #6366f1;
+      --accent-h: #818cf8;
+      --green:    #22c55e;
+      --yellow:   #f59e0b;
+      --r:        12px;
     }
-    </script>
-  </head>
-  <body style="margin:0">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── Utility ──────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+    .label::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    section { padding: 96px 24px; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Buttons ──────────────────────────────── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background .2s, transform .2s, box-shadow .2s;
+    }
+    .btn-primary:hover {
+      background: var(--accent-h);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(99,102,241,.35);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: transparent;
+      color: var(--text);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline:hover { border-color: var(--text3); background: var(--bg3); }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background .2s, transform .2s, box-shadow .2s;
+    }
+    .btn-wa:hover {
+      background: #22bf5c;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(37,211,102,.35);
+    }
+
+    /* ── Nav ──────────────────────────────────── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 200;
+      padding: 0 24px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(10,10,10,.8);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo { font-weight: 800; font-size: 18px; letter-spacing: -.5px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text2); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--accent-h) !important; }
+
+    /* ── Hero ─────────────────────────────────── */
+    #hero {
+      padding-top: 160px;
+      padding-bottom: 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute;
+      width: 900px; height: 900px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,102,241,.07) 0%, transparent 65%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -58%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(99,102,241,.1);
+      border: 1px solid rgba(99,102,241,.25);
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-size: 13px;
+      color: var(--accent-h);
+      margin-bottom: 36px;
+      font-weight: 500;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+
+    h1 {
+      font-size: clamp(36px, 6.5vw, 74px);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -2.5px;
+      margin-bottom: 24px;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 .hl {
+      background: linear-gradient(130deg, #6366f1 0%, #a78bfa 60%, #c4b5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--text2);
+      max-width: 520px;
+      margin: 0 auto 18px;
+      line-height: 1.75;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .tag {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 13px;
+      font-size: 13px;
+      color: var(--text2);
+      font-weight: 500;
+    }
+
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      margin-top: 72px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; padding: 0 40px; border-right: 1px solid var(--border); }
+    .stat:last-child { border-right: none; }
+    .stat-n {
+      font-size: 36px; font-weight: 900; letter-spacing: -1.5px;
+      background: linear-gradient(130deg, #fff 0%, #aaa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-l { font-size: 13px; color: var(--text2); margin-top: 4px; }
+
+    /* ── Industries ───────────────────────────── */
+    #industries {
+      padding: 40px 24px;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .ind-label {
+      text-align: center; font-size: 12px; color: var(--text3);
+      font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;
+      margin-bottom: 22px;
+    }
+    .ind-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .ind-chip {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 18px;
+      font-size: 13px; font-weight: 500; color: var(--text2);
+      transition: border-color .2s, color .2s;
+    }
+    .ind-chip:hover { border-color: rgba(99,102,241,.4); color: var(--text); }
+
+    /* ── Services ─────────────────────────────── */
+    #services { background: var(--bg); }
+
+    .sec-head { margin-bottom: 56px; }
+    .sec-head h2 {
+      font-size: clamp(28px, 4vw, 50px);
+      font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 14px;
+    }
+    .sec-head p { color: var(--text2); font-size: 16px; max-width: 460px; }
+
+    .srv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media(max-width:900px){ .srv-grid{ grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:580px){ .srv-grid{ grid-template-columns: 1fr; } }
+
+    .srv-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 30px;
+      transition: border-color .2s, transform .2s;
+    }
+    .srv-card:hover { border-color: rgba(99,102,241,.4); transform: translateY(-4px); }
+    .srv-icon {
+      width: 46px; height: 46px; background: rgba(99,102,241,.1);
+      border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; font-size: 22px; margin-bottom: 20px;
+    }
+    .srv-card h3 { font-size: 17px; font-weight: 700; letter-spacing: -.4px; margin-bottom: 10px; }
+    .srv-card p { color: var(--text2); font-size: 14px; line-height: 1.75; margin-bottom: 18px; }
+    .srv-feats { display: flex; flex-direction: column; gap: 7px; }
+    .srv-feat { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text2); }
+    .srv-feat::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; margin-top:1px; }
+
+    /* ── Showcase ─────────────────────────────── */
+    #showcase { background: var(--bg2); }
+
+    .show-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media(max-width:700px){ .show-grid{ grid-template-columns: 1fr; } }
+
+    .show-card {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: var(--r); overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .show-card:hover { transform: translateY(-5px); box-shadow: 0 20px 48px rgba(0,0,0,.4); }
+    .show-card.wide { grid-column: span 2; }
+    @media(max-width:700px){ .show-card.wide{ grid-column: span 1; } }
+
+    /* Mockup */
+    .mock-area {
+      background: #0d0d0d; border-bottom: 1px solid var(--border);
+      padding: 28px; min-height: 230px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* CRM */
+    .m-crm { display: flex; gap: 12px; width: 100%; max-width: 560px; }
+    .m-sidebar {
+      width: 130px; background: rgba(255,255,255,.03);
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 14px; flex-shrink: 0;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .m-sb-row { height: 7px; background: rgba(255,255,255,.08); border-radius: 4px; }
+    .m-sb-row.a { background: rgba(99,102,241,.5); width: 75%; }
+    .m-main { flex: 1; display: flex; flex-direction: column; gap: 9px; }
+    .m-stat-row { display: flex; gap: 8px; }
+    .m-stat {
+      flex: 1; background: rgba(255,255,255,.03);
+      border: 1px solid var(--border); border-radius: 6px; padding: 10px;
+    }
+    .m-stat-v { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+    .m-stat-l { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; }
+    .m-table {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+    }
+    .m-row {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 10px; border-bottom: 1px solid var(--border);
+    }
+    .m-row:last-child { border-bottom: none; }
+    .m-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+    .m-line { height: 6px; background: rgba(255,255,255,.09); border-radius: 3px; flex: 1; }
+    .m-badge {
+      background: rgba(34,197,94,.15); color: var(--green);
+      font-size: 9px; padding: 2px 6px; border-radius: 3px; font-weight: 700; flex-shrink: 0;
+    }
+    .m-badge.warn { background: rgba(245,158,11,.15); color: var(--yellow); }
+
+    /* Bar chart */
+    .m-chart { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 320px; }
+    .m-chart-head { display: flex; justify-content: space-between; }
+    .m-chart-head span { font-size: 10px; color: var(--text2); }
+    .m-bars { display: flex; align-items: flex-end; gap: 7px; height: 90px; }
+    .m-bar { flex: 1; background: rgba(99,102,241,.2); border-radius: 4px 4px 0 0; transition: background .2s; }
+    .m-bar:hover { background: rgba(99,102,241,.45); }
+    .m-mini-row { display: flex; gap: 8px; }
+    .m-mini {
+      flex: 1; background: rgba(255,255,255,.03);
+      border: 1px solid var(--border); border-radius: 6px; padding: 8px;
+    }
+    .m-mini-v { font-size: 12px; font-weight: 700; margin-bottom: 1px; }
+    .m-mini-l { font-size: 9px; color: var(--text3); text-transform: uppercase; }
+
+    /* Chat */
+    .m-chat {
+      width: 100%; max-width: 270px;
+      background: rgba(255,255,255,.03); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px;
+    }
+    .m-chat-head {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+    }
+    .m-avatar {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #a78bfa);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+    }
+    .m-chat-name { font-size: 12px; font-weight: 600; }
+    .m-online { font-size: 10px; color: var(--green); margin-top: 1px; }
+    .m-msgs { display: flex; flex-direction: column; gap: 10px; }
+    .m-msg {
+      background: rgba(255,255,255,.05); border-radius: 8px 8px 8px 2px;
+      padding: 8px 11px; font-size: 11px; color: var(--text2);
+      max-width: 90%; line-height: 1.55;
+    }
+    .m-msg.me {
+      background: rgba(99,102,241,.15); border-radius: 8px 8px 2px 8px;
+      align-self: flex-end; color: var(--text);
+    }
+
+    .show-info { padding: 20px 24px; }
+    .show-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent); margin-bottom: 6px; }
+    .show-info h3 { font-size: 16px; font-weight: 700; letter-spacing: -.3px; margin-bottom: 6px; }
+    .show-info p { font-size: 13px; color: var(--text2); line-height: 1.65; }
+
+    /* ── Process ──────────────────────────────── */
+    #process { background: var(--bg); }
+
+    .proc-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    @media(max-width:800px){ .proc-wrap{ grid-template-columns: 1fr; gap: 40px; } }
+
+    .proc-steps { display: flex; flex-direction: column; }
+    .proc-step {
+      display: grid; grid-template-columns: 72px 1fr;
+      gap: 24px; padding: 36px 0; border-bottom: 1px solid var(--border);
+    }
+    .proc-step:last-child { border-bottom: none; }
+    .step-num-wrap { display: flex; align-items: flex-start; padding-top: 4px; }
+    .step-n {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(99,102,241,.1); border: 1px solid rgba(99,102,241,.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: var(--accent);
+    }
+    .proc-step h3 { font-size: 17px; font-weight: 700; letter-spacing: -.4px; margin-bottom: 8px; }
+    .proc-step p { color: var(--text2); font-size: 14px; line-height: 1.75; }
+    .step-dur {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 6px; padding: 3px 10px;
+      font-size: 11px; color: var(--text3); margin-top: 10px;
+    }
+
+    /* ── Testimonials ─────────────────────────── */
+    #testimonials { background: var(--bg2); }
+
+    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media(max-width:900px){ .test-grid{ grid-template-columns: 1fr 1fr; } }
+    @media(max-width:580px){ .test-grid{ grid-template-columns: 1fr; } }
+
+    .test-card {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 28px;
+      display: flex; flex-direction: column;
+    }
+    .stars { display: flex; gap: 2px; margin-bottom: 16px; }
+    .star { color: var(--yellow); font-size: 14px; }
+    .test-q { font-size: 15px; line-height: 1.75; color: var(--text); margin-bottom: 22px; font-style: italic; flex: 1; }
+    .test-author { display: flex; align-items: center; gap: 12px; }
+    .t-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #a78bfa);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 13px; flex-shrink: 0;
+    }
+    .t-name { font-size: 14px; font-weight: 600; }
+    .t-info { font-size: 12px; color: var(--text2); margin-top: 2px; }
+
+    /* ── FAQ ──────────────────────────────────── */
+    #faq { background: var(--bg); }
+
+    .faq-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    @media(max-width:800px){ .faq-wrap{ grid-template-columns: 1fr; gap: 40px; } }
+
+    .faq-list { max-width: 580px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; color: var(--text);
+      font-family: inherit; font-size: 15px; font-weight: 600;
+      text-align: left; cursor: pointer; padding: 22px 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .faq-q .plus { font-size: 22px; color: var(--text3); flex-shrink: 0; transition: transform .25s; font-weight: 300; }
+    .faq-item.open .plus { transform: rotate(45deg); }
+    .faq-a {
+      color: var(--text2); font-size: 15px; line-height: 1.75;
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, padding-bottom .35s ease;
+    }
+    .faq-item.open .faq-a { max-height: 220px; padding-bottom: 20px; }
+
+    /* ── CTA ──────────────────────────────────── */
+    #cta { background: var(--bg2); text-align: center; }
+
+    .cta-box {
+      background: linear-gradient(140deg, rgba(99,102,241,.12) 0%, rgba(167,139,250,.06) 100%);
+      border: 1px solid rgba(99,102,241,.2);
+      border-radius: 20px; padding: 80px 40px;
+    }
+    @media(max-width:600px){ .cta-box{ padding: 48px 24px; } }
+    .cta-box h2 {
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 800; letter-spacing: -1.5px; margin-bottom: 16px;
+    }
+    .cta-box p { color: var(--text2); font-size: 17px; max-width: 400px; margin: 0 auto 40px; }
+    .cta-acts { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Footer ───────────────────────────────── */
+    footer { border-top: 1px solid var(--border); padding: 44px 24px; background: var(--bg); }
+    .foot-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    }
+    .foot-logo { font-weight: 800; font-size: 17px; }
+    .foot-logo span { color: var(--accent); }
+    .foot-links { display: flex; gap: 24px; list-style: none; }
+    .foot-links a { color: var(--text3); font-size: 13px; transition: color .2s; }
+    .foot-links a:hover { color: var(--text2); }
+    .foot-copy { color: var(--text3); font-size: 13px; }
+
+    /* ── WhatsApp Float ───────────────────────── */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 500;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+    }
+    .wa-tip {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 16px;
+      font-size: 13px; white-space: nowrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,.3);
+      animation: fadeUp .5s ease; transition: opacity .4s;
+    }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+    .wa-btn {
+      width: 56px; height: 56px; border-radius: 50%; background: #25d366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.55); }
+    .wa-btn svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ── Responsive misc ──────────────────────── */
+    @media(max-width:768px){ .nav-links{ display: none; } }
+    @media(max-width:500px){
+      .stat { padding: 16px 14px; border-right: none; border-bottom: 1px solid var(--border); width: 50%; }
+      .stat:nth-child(odd){ border-right: 1px solid var(--border); }
+      .hero-stats{ flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Kelvin<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#showcase">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="https://wa.me/601XXXXXXXX" class="nav-cta">Free Consultation</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══ HERO ═════════════════════════════════════ -->
+<section id="hero">
+  <div class="container" style="position:relative;">
+    <div class="hero-glow"></div>
+
+    <div class="hero-badge">
+      <div class="dot"></div>
+      Available for new projects &nbsp;·&nbsp; Based in Malaysia
+    </div>
+
+    <h1>Custom Business Systems That<br><span class="hl">Improve Sales &amp; Operations</span></h1>
+
+    <p class="hero-sub">We build enterprise-grade ERP, CRM, and AI-powered systems that eliminate manual work and help your business scale.</p>
+
+    <div class="hero-tags">
+      <span class="tag">CRM Systems</span>
+      <span class="tag">ERP &amp; Inventory</span>
+      <span class="tag">AI Automation</span>
+      <span class="tag">Custom Dashboards</span>
+      <span class="tag">POS Systems</span>
+      <span class="tag">Internal Tools</span>
+    </div>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/601XXXXXXXX?text=Hi%20Kelvin%2C%20I%27m%20interested%20in%20discussing%20a%20project." class="btn-primary">
+        💬 Discuss Your Project
+      </a>
+      <a href="#showcase" class="btn-outline">View Our Work →</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-n">30+</div>
+        <div class="stat-l">Projects Delivered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">5+</div>
+        <div class="stat-l">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">20+</div>
+        <div class="stat-l">Happy Clients</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">100%</div>
+        <div class="stat-l">On-Time Delivery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INDUSTRIES ════════════════════════════════ -->
+<section id="industries">
+  <div class="container">
+    <p class="ind-label">Trusted by businesses across industries</p>
+    <div class="ind-row">
+      <div class="ind-chip">🛒 Retail &amp; E-Commerce</div>
+      <div class="ind-chip">🚚 Logistics &amp; Supply Chain</div>
+      <div class="ind-chip">🏭 Manufacturing</div>
+      <div class="ind-chip">🏥 Healthcare &amp; Clinic</div>
+      <div class="ind-chip">🎓 Education</div>
+      <div class="ind-chip">🚗 Automotive</div>
+      <div class="ind-chip">🏢 Property &amp; Real Estate</div>
+      <div class="ind-chip">🍴 F&amp;B &amp; Restaurant</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="label">What We Build</div>
+      <h2>Enterprise-grade solutions,<br>built for your business</h2>
+      <p>We don't just write code — we build systems that solve real business problems and deliver measurable results.</p>
+    </div>
+    <div class="srv-grid">
+
+      <div class="srv-card reveal">
+        <div class="srv-icon">📊</div>
+        <h3>CRM Systems</h3>
+        <p>Centralize customer data, track leads, and automate follow-ups. Built for your sales team to close deals faster.</p>
+        <div class="srv-feats">
+          <div class="srv-feat">Centralize all customer records</div>
+          <div class="srv-feat">Automate follow-up reminders</div>
+          <div class="srv-feat">Track sales pipeline &amp; performance</div>
+          <div class="srv-feat">Custom reports &amp; analytics</div>
+        </div>
+      </div>
+
+      <div class="srv-card reveal">
+        <div class="srv-icon">🏭</div>
+        <h3>ERP &amp; Inventory Management</h3>
+        <p>Manage stock, orders, suppliers, and operations from one system — no more spreadsheets or guesswork.</p>
+        <div class="srv-feats">
+          <div class="srv-feat">Real-time stock tracking</div>
+          <div class="srv-feat">Purchase order automation</div>
+          <div class="srv-feat">Multi-location warehouse support</div>
+          <div class="srv-feat">Supplier &amp; vendor management</div>
+        </div>
+      </div>
+
+      <div class="srv-card reveal">
+        <div class="srv-icon">🤖</div>
+        <h3>AI Automation</h3>
+        <p>Reduce manual work with intelligent automation. Let AI handle repetitive tasks so your team can focus on growth.</p>
+        <div class="srv-feats">
+          <div class="srv-feat">AI chatbot for customer support</div>
+          <div class="srv-feat">Automated report generation</div>
+          <div class="srv-feat">Smart data extraction (OCR)</div>
+          <div class="srv-feat">Workflow triggers &amp; scheduling</div>
+        </div>
+      </div>
+
+      <div class="srv-card reveal">
+        <div class="srv-icon">💳</div>
+        <h3>POS &amp; Billing Systems</h3>
+        <p>Fast, reliable point-of-sale with real-time reporting, invoice management, and e-payment integration.</p>
+        <div class="srv-feats">
+          <div class="srv-feat">Multi-payment method support</div>
+          <div class="srv-feat">Auto invoice &amp; receipt generation</div>
+          <div class="srv-feat">Daily sales reports</div>
+          <div class="srv-feat">Staff access control</div>
+        </div>
+      </div>
+
+      <div class="srv-card reveal">
+        <div class="srv-icon">📈</div>
+        <h3>Custom Dashboards</h3>
+        <p>Real-time business intelligence dashboards that give instant visibility into your operations and KPIs.</p>
+        <div class="srv-feats">
+          <div class="srv-feat">Live KPI monitoring</div>
+          <div class="srv-feat">Multi-source data integration</div>
+          <div class="srv-feat">Role-based access control</div>
+          <div class="srv-feat">Mobile-friendly interface</div>
+        </div>
+      </div>
+
+      <div class="srv-card reveal">
+        <div class="srv-icon">🌐</div>
+        <h3>Business Websites</h3>
+        <p>Professional, fast, conversion-optimized websites that represent your brand and consistently generate leads.</p>
+        <div class="srv-feats">
+          <div class="srv-feat">Mobile-first responsive design</div>
+          <div class="srv-feat">SEO optimized</div>
+          <div class="srv-feat">CMS for easy content updates</div>
+          <div class="srv-feat">Contact form &amp; lead capture</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SHOWCASE ══════════════════════════════════ -->
+<section id="showcase">
+  <div class="container">
+    <div class="sec-head reveal" style="text-align:center;max-width:500px;margin:0 auto 56px;">
+      <div class="label">Our Work</div>
+      <h2>Systems that make businesses run better</h2>
+      <p>Every project is custom-built from scratch. No templates, no shortcuts.</p>
+    </div>
+    <div class="show-grid">
+
+      <!-- CRM Dashboard (wide) -->
+      <div class="show-card wide reveal">
+        <div class="mock-area">
+          <div class="m-crm">
+            <div class="m-sidebar">
+              <div class="m-sb-row a"></div>
+              <div class="m-sb-row" style="width:80%"></div>
+              <div class="m-sb-row" style="width:65%"></div>
+              <div class="m-sb-row" style="width:75%"></div>
+              <div class="m-sb-row" style="width:55%"></div>
+              <div class="m-sb-row" style="width:70%;margin-top:12px"></div>
+              <div class="m-sb-row" style="width:60%"></div>
+            </div>
+            <div class="m-main">
+              <div class="m-stat-row">
+                <div class="m-stat">
+                  <div class="m-stat-v">RM 284K</div>
+                  <div class="m-stat-l">Monthly Revenue</div>
+                </div>
+                <div class="m-stat">
+                  <div class="m-stat-v">1,284</div>
+                  <div class="m-stat-l">Total Customers</div>
+                </div>
+                <div class="m-stat">
+                  <div class="m-stat-v" style="color:var(--green)">94%</div>
+                  <div class="m-stat-l">Retention Rate</div>
+                </div>
+                <div class="m-stat">
+                  <div class="m-stat-v">47</div>
+                  <div class="m-stat-l">Active Leads</div>
+                </div>
+              </div>
+              <div class="m-table">
+                <div class="m-row">
+                  <div class="m-dot" style="background:var(--accent)"></div>
+                  <div class="m-line" style="max-width:140px"></div>
+                  <div class="m-line" style="max-width:80px"></div>
+                  <div class="m-badge">Active</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-dot"></div>
+                  <div class="m-line" style="max-width:160px"></div>
+                  <div class="m-line" style="max-width:60px"></div>
+                  <div class="m-badge">Active</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-dot" style="background:var(--yellow)"></div>
+                  <div class="m-line" style="max-width:110px"></div>
+                  <div class="m-line" style="max-width:90px"></div>
+                  <div class="m-badge warn">Pending</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-dot"></div>
+                  <div class="m-line" style="max-width:150px"></div>
+                  <div class="m-line" style="max-width:70px"></div>
+                  <div class="m-badge">Active</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="show-info">
+          <div class="show-tag">CRM System</div>
+          <h3>Customer Relationship Management Dashboard</h3>
+          <p>Full-stack CRM with lead tracking, sales pipeline, follow-up automation, and revenue analytics — built for a wholesale distribution company in KL.</p>
+        </div>
+      </div>
+
+      <!-- ERP / Inventory -->
+      <div class="show-card reveal">
+        <div class="mock-area">
+          <div class="m-chart">
+            <div class="m-chart-head">
+              <span>Stock Level Overview</span>
+              <span style="color:var(--accent)">This Week ↑12%</span>
+            </div>
+            <div class="m-bars">
+              <div class="m-bar" style="height:42%"></div>
+              <div class="m-bar" style="height:67%"></div>
+              <div class="m-bar" style="height:53%"></div>
+              <div class="m-bar" style="height:88%"></div>
+              <div class="m-bar" style="height:48%"></div>
+              <div class="m-bar" style="height:95%"></div>
+              <div class="m-bar" style="height:72%"></div>
+            </div>
+            <div class="m-mini-row">
+              <div class="m-mini">
+                <div class="m-mini-v" style="color:var(--green)">843</div>
+                <div class="m-mini-l">SKUs Tracked</div>
+              </div>
+              <div class="m-mini">
+                <div class="m-mini-v" style="color:var(--yellow)">12</div>
+                <div class="m-mini-l">Low Stock Alert</div>
+              </div>
+              <div class="m-mini">
+                <div class="m-mini-v">3</div>
+                <div class="m-mini-l">Warehouses</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="show-info">
+          <div class="show-tag">ERP System</div>
+          <h3>Inventory &amp; Warehouse Management</h3>
+          <p>Real-time stock tracking across multiple warehouses, auto purchase order triggers, and supplier management.</p>
+        </div>
+      </div>
+
+      <!-- AI Chatbot -->
+      <div class="show-card reveal">
+        <div class="mock-area">
+          <div class="m-chat">
+            <div class="m-chat-head">
+              <div class="m-avatar">🤖</div>
+              <div>
+                <div class="m-chat-name">AI Assistant</div>
+                <div class="m-online">● Online 24/7</div>
+              </div>
+            </div>
+            <div class="m-msgs">
+              <div class="m-msg">Hi! How can I help your business today?</div>
+              <div class="m-msg me">What's the stock for Product A?</div>
+              <div class="m-msg">Product A: <strong style="color:var(--text)">284 units</strong> in stock. Reorder at 50 units. Next delivery in <strong style="color:var(--text)">3 days</strong>. 📦</div>
+            </div>
+          </div>
+        </div>
+        <div class="show-info">
+          <div class="show-tag">AI Automation</div>
+          <h3>AI Business Assistant &amp; Chatbot</h3>
+          <p>Intelligent chatbot connected to live business data — answers queries, generates reports, and handles customer enquiries 24/7.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESS ═══════════════════════════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="proc-wrap">
+
+      <div class="reveal">
+        <div class="label">How We Work</div>
+        <h2 style="font-size:clamp(28px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px;">Simple process,<br>zero surprises</h2>
+        <p style="color:var(--text2);font-size:16px;line-height:1.75;max-width:380px;">Structured and transparent — so you always know what's happening and when it'll be done. No delays, no hidden costs.</p>
+        <div style="margin-top:32px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:24px;">
+          <div style="font-size:13px;color:var(--text2);margin-bottom:10px;font-weight:600;">Typical project timeline</div>
+          <div style="font-size:30px;font-weight:900;letter-spacing:-1px;margin-bottom:4px;">3 – 8 Weeks</div>
+          <div style="font-size:13px;color:var(--text2);">From requirement discussion to live deployment</div>
+        </div>
+      </div>
+
+      <div class="proc-steps reveal">
+        <div class="proc-step">
+          <div class="step-num-wrap"><div class="step-n">01</div></div>
+          <div>
+            <h3>Requirement Discussion</h3>
+            <p>Free consultation to understand your business, pain points, and goals — before writing a single line of code.</p>
+            <div class="step-dur">📅 1–2 days</div>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="step-num-wrap"><div class="step-n">02</div></div>
+          <div>
+            <h3>UI/UX Planning</h3>
+            <p>We design wireframes and user flows for your approval — you see exactly what you're getting before development starts.</p>
+            <div class="step-dur">📅 3–5 days</div>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="step-num-wrap"><div class="step-n">03</div></div>
+          <div>
+            <h3>System Development</h3>
+            <p>We build your system with regular progress updates. Review at each milestone and request adjustments anytime.</p>
+            <div class="step-dur">📅 2–6 weeks</div>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="step-num-wrap"><div class="step-n">04</div></div>
+          <div>
+            <h3>Testing &amp; Deployment</h3>
+            <p>Thorough testing before going live. We handle server setup, deployment, and train your team to use the system.</p>
+            <div class="step-dur">📅 3–5 days</div>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="step-num-wrap"><div class="step-n">05</div></div>
+          <div>
+            <h3>Long-Term Support</h3>
+            <p>We don't disappear after launch. Ongoing maintenance, bug fixes, and feature updates keep your system running.</p>
+            <div class="step-dur">📅 Ongoing</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══════════════════════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="sec-head reveal" style="text-align:center;max-width:500px;margin:0 auto 56px;">
+      <div class="label">Client Reviews</div>
+      <h2>Trusted by business owners across Malaysia</h2>
+    </div>
+    <div class="test-grid">
+
+      <div class="test-card reveal">
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="test-q">"Before this system, we were managing 500+ customers on Excel. Now everything is centralized and our sales team closes deals 40% faster. Best investment we've made."</p>
+        <div class="test-author">
+          <div class="t-avatar">JL</div>
+          <div>
+            <div class="t-name">Jason Lim</div>
+            <div class="t-info">Director · Wholesale Distribution, KL</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card reveal">
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="test-q">"The inventory system completely transformed our warehouse. Stock discrepancies dropped from 8% to near zero. Kelvin delivered on time and within budget."</p>
+        <div class="test-author">
+          <div class="t-avatar">ST</div>
+          <div>
+            <div class="t-name">Sarah Tan</div>
+            <div class="t-info">Operations Manager · Manufacturing, Penang</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card reveal">
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="test-q">"The AI chatbot handles 70% of our customer enquiries automatically. Our support team now focuses on complex issues. Very professional — highly recommended."</p>
+        <div class="test-author">
+          <div class="t-avatar">AC</div>
+          <div>
+            <div class="t-name">Alan Chong</div>
+            <div class="t-info">CEO · E-Commerce Platform, Johor</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ═══════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-wrap">
+
+      <div class="reveal">
+        <div class="label">FAQ</div>
+        <h2 style="font-size:clamp(28px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px;">Common questions,<br>answered honestly</h2>
+        <p style="color:var(--text2);font-size:15px;line-height:1.75;max-width:340px;margin-bottom:28px;">Still have questions? We're happy to chat — no commitment, no pressure.</p>
+        <a href="https://wa.me/601XXXXXXXX" class="btn-wa" style="display:inline-flex;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Ask on WhatsApp
+        </a>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q">How long does a project take? <span class="plus">+</span></button>
+          <div class="faq-a">Most projects complete within 3–8 weeks depending on complexity. A simple internal tool may take 2–3 weeks, while a full ERP or CRM system typically takes 6–10 weeks. We give you a clear timeline before we start.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How much does a custom system cost? <span class="plus">+</span></button>
+          <div class="faq-a">We offer transparent fixed-price quotes after a requirement discussion — no hidden fees. Simple systems start from RM 3,000; enterprise systems typically range from RM 10,000–50,000+.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Will you train my team after deployment? <span class="plus">+</span></button>
+          <div class="faq-a">Yes. Every project includes system training — documentation, walkthrough sessions, and ongoing WhatsApp support after launch. We make sure your team is confident using the system.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you provide long-term maintenance? <span class="plus">+</span></button>
+          <div class="faq-a">Absolutely. We offer monthly maintenance plans that include bug fixes, updates, and feature enhancements. We build long-term partnerships with our clients — not just one-off projects.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can you integrate with my existing software? <span class="plus">+</span></button>
+          <div class="faq-a">Yes. We integrate with most existing systems — accounting software (QuickBooks, SQL), e-commerce (Shopify, Lazada), messaging (WhatsApp, Telegram), payment gateways, and more.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What if I need changes after launch? <span class="plus">+</span></button>
+          <div class="faq-a">We handle post-launch changes promptly. Minor tweaks within scope are covered. For larger enhancements, we provide transparent quotes with no surprise charges.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ════════════════════════════════════════ -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="label" style="justify-content:center;">Start Today</div>
+      <h2>Ready to build your<br>business system?</h2>
+      <p>Book a free 30-minute consultation. No commitment, no hard sell — just an honest conversation about what you need.</p>
+      <div class="cta-acts">
+        <a href="https://wa.me/601XXXXXXXX?text=Hi%20Kelvin%2C%20I%27d%20like%20a%20free%20consultation%20about%20my%20project." class="btn-wa">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Get Free Consultation
+        </a>
+        <a href="mailto:pengwenkai@hotmail.com" class="btn-outline">✉️ Send Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════ -->
+<footer>
+  <div class="foot-inner">
+    <a href="#" class="foot-logo">Kelvin<span>.</span></a>
+    <ul class="foot-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#showcase">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <p class="foot-copy">© 2026 Kelvin Peng. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FLOAT ════════════════════════════ -->
+<div class="wa-float">
+  <div class="wa-tip" id="waTip">💬 Free consultation — chat now!</div>
+  <a href="https://wa.me/601XXXXXXXX?text=Hi%20Kelvin%2C%20I%27m%20interested%20in%20building%20a%20system%20for%20my%20business."
+     class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ══ JS ═════════════════════════════════════════ -->
+<script>
+  // Scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!open) item.classList.add('open');
+    });
+  });
+
+  // Hide WA tooltip after 6s
+  setTimeout(() => {
+    const tip = document.getElementById('waTip');
+    if (tip) { tip.style.opacity = '0'; setTimeout(() => tip.remove(), 400); }
+  }, 6000);
+
+  // Active nav highlight on scroll
+  const secs = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + cur ? '#fff' : '';
+    });
+  }, { passive: true });
+</script>
+
+</body>
 </html>
