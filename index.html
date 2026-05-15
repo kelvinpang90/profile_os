@@ -157,6 +157,23 @@
     }
     .nav-cta:hover { background: var(--accent-h) !important; }
 
+    .nav-lang {
+      background: rgba(99,102,241,.1);
+      border: 1px solid rgba(99,102,241,.25);
+      color: var(--accent-h);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+      font-family: inherit;
+      letter-spacing: .5px;
+    }
+    .nav-lang:hover { background: rgba(99,102,241,.2); color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    @media(max-width:768px){ .nav-right{ gap:10px; } }
+
     /* ── Hero ─────────────────────────────────── */
     #hero {
       padding-top: 160px;
@@ -565,13 +582,16 @@
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">Kelvin<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#showcase">Work</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="https://wa.me/601XXXXXXXX" class="nav-cta">Free Consultation</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#services" data-zh="服务">Services</a></li>
+        <li><a href="#showcase" data-zh="案例">Work</a></li>
+        <li><a href="#process" data-zh="流程">Process</a></li>
+        <li><a href="#testimonials" data-zh="客户评价">Reviews</a></li>
+        <li><a href="https://wa.me/60168623902" class="nav-cta" data-zh="免费咨询">Free Consultation</a></li>
+      </ul>
+      <button id="langToggle" class="nav-lang" aria-label="Switch language">中文</button>
+    </div>
   </div>
 </nav>
 
@@ -582,45 +602,45 @@
 
     <div class="hero-badge">
       <div class="dot"></div>
-      Available for new projects &nbsp;·&nbsp; Based in Malaysia
+      <span data-zh="接单中 · 团队位于马来西亚">Available for new projects &nbsp;·&nbsp; Based in Malaysia</span>
     </div>
 
-    <h1>Custom Business Systems That<br><span class="hl">Improve Sales &amp; Operations</span></h1>
+    <h1 data-zh="定制业务系统<br><span class=&quot;hl&quot;>助力销售与运营升级</span>">Custom Business Systems That<br><span class="hl">Improve Sales &amp; Operations</span></h1>
 
-    <p class="hero-sub">We build enterprise-grade ERP, CRM, and AI-powered systems that eliminate manual work and help your business scale.</p>
+    <p class="hero-sub" data-zh="我们打造企业级 ERP、CRM 与 AI 驱动系统，消除人工操作，让您的业务规模化增长。">We build enterprise-grade ERP, CRM, and AI-powered systems that eliminate manual work and help your business scale.</p>
 
     <div class="hero-tags">
-      <span class="tag">CRM Systems</span>
-      <span class="tag">ERP &amp; Inventory</span>
-      <span class="tag">AI Automation</span>
-      <span class="tag">Custom Dashboards</span>
-      <span class="tag">POS Systems</span>
-      <span class="tag">Internal Tools</span>
+      <span class="tag" data-zh="CRM 系统">CRM Systems</span>
+      <span class="tag" data-zh="ERP 与库存">ERP &amp; Inventory</span>
+      <span class="tag" data-zh="AI 自动化">AI Automation</span>
+      <span class="tag" data-zh="定制看板">Custom Dashboards</span>
+      <span class="tag" data-zh="POS 系统">POS Systems</span>
+      <span class="tag" data-zh="内部工具">Internal Tools</span>
     </div>
 
     <div class="hero-actions">
-      <a href="https://wa.me/601XXXXXXXX?text=Hi%20Kelvin%2C%20I%27m%20interested%20in%20discussing%20a%20project." class="btn-primary">
+      <a href="https://wa.me/60168623902?text=Hi%20Kelvin%2C%20I%27m%20interested%20in%20discussing%20a%20project." class="btn-primary" data-zh="💬 聊聊您的项目">
         💬 Discuss Your Project
       </a>
-      <a href="#showcase" class="btn-outline">View Our Work →</a>
+      <a href="#showcase" class="btn-outline" data-zh="查看作品 →">View Our Work →</a>
     </div>
 
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-n">30+</div>
-        <div class="stat-l">Projects Delivered</div>
+        <div class="stat-l" data-zh="交付项目">Projects Delivered</div>
       </div>
       <div class="stat">
-        <div class="stat-n">5+</div>
-        <div class="stat-l">Years Experience</div>
+        <div class="stat-n">15+</div>
+        <div class="stat-l" data-zh="年开发经验">Years Experience</div>
       </div>
       <div class="stat">
         <div class="stat-n">20+</div>
-        <div class="stat-l">Happy Clients</div>
+        <div class="stat-l" data-zh="满意客户">Happy Clients</div>
       </div>
       <div class="stat">
         <div class="stat-n">100%</div>
-        <div class="stat-l">On-Time Delivery</div>
+        <div class="stat-l" data-zh="按时交付率">On-Time Delivery</div>
       </div>
     </div>
   </div>
@@ -629,16 +649,16 @@
 <!-- ══ INDUSTRIES ════════════════════════════════ -->
 <section id="industries">
   <div class="container">
-    <p class="ind-label">Trusted by businesses across industries</p>
+    <p class="ind-label" data-zh="服务于各行各业的企业客户">Trusted by businesses across industries</p>
     <div class="ind-row">
-      <div class="ind-chip">🛒 Retail &amp; E-Commerce</div>
-      <div class="ind-chip">🚚 Logistics &amp; Supply Chain</div>
-      <div class="ind-chip">🏭 Manufacturing</div>
-      <div class="ind-chip">🏥 Healthcare &amp; Clinic</div>
-      <div class="ind-chip">🎓 Education</div>
-      <div class="ind-chip">🚗 Automotive</div>
-      <div class="ind-chip">🏢 Property &amp; Real Estate</div>
-      <div class="ind-chip">🍴 F&amp;B &amp; Restaurant</div>
+      <div class="ind-chip" data-zh="🛒 零售与电商">🛒 Retail &amp; E-Commerce</div>
+      <div class="ind-chip" data-zh="🚚 物流与供应链">🚚 Logistics &amp; Supply Chain</div>
+      <div class="ind-chip" data-zh="🏭 制造业">🏭 Manufacturing</div>
+      <div class="ind-chip" data-zh="🏥 医疗与诊所">🏥 Healthcare &amp; Clinic</div>
+      <div class="ind-chip" data-zh="🎓 教育">🎓 Education</div>
+      <div class="ind-chip" data-zh="🚗 汽车行业">🚗 Automotive</div>
+      <div class="ind-chip" data-zh="🏢 地产与物业">🏢 Property &amp; Real Estate</div>
+      <div class="ind-chip" data-zh="🍴 餐饮">🍴 F&amp;B &amp; Restaurant</div>
     </div>
   </div>
 </section>
@@ -647,81 +667,81 @@
 <section id="services">
   <div class="container">
     <div class="sec-head reveal">
-      <div class="label">What We Build</div>
-      <h2>Enterprise-grade solutions,<br>built for your business</h2>
-      <p>We don't just write code — we build systems that solve real business problems and deliver measurable results.</p>
+      <div class="label" data-zh="我们能做什么">What We Build</div>
+      <h2 data-zh="企业级解决方案，<br>为您的业务量身定制">Enterprise-grade solutions,<br>built for your business</h2>
+      <p data-zh="我们不仅写代码 —— 更构建能解决真实业务问题、带来可量化成果的系统。">We don't just write code — we build systems that solve real business problems and deliver measurable results.</p>
     </div>
     <div class="srv-grid">
 
       <div class="srv-card reveal">
         <div class="srv-icon">📊</div>
-        <h3>CRM Systems</h3>
-        <p>Centralize customer data, track leads, and automate follow-ups. Built for your sales team to close deals faster.</p>
+        <h3 data-zh="CRM 客户管理系统">CRM Systems</h3>
+        <p data-zh="集中管理客户数据、追踪线索、自动化跟进，帮助销售团队更快成单。">Centralize customer data, track leads, and automate follow-ups. Built for your sales team to close deals faster.</p>
         <div class="srv-feats">
-          <div class="srv-feat">Centralize all customer records</div>
-          <div class="srv-feat">Automate follow-up reminders</div>
-          <div class="srv-feat">Track sales pipeline &amp; performance</div>
-          <div class="srv-feat">Custom reports &amp; analytics</div>
+          <div class="srv-feat" data-zh="集中存储所有客户档案">Centralize all customer records</div>
+          <div class="srv-feat" data-zh="自动化跟进提醒">Automate follow-up reminders</div>
+          <div class="srv-feat" data-zh="销售管道与业绩追踪">Track sales pipeline &amp; performance</div>
+          <div class="srv-feat" data-zh="自定义报表与数据分析">Custom reports &amp; analytics</div>
         </div>
       </div>
 
       <div class="srv-card reveal">
         <div class="srv-icon">🏭</div>
-        <h3>ERP &amp; Inventory Management</h3>
-        <p>Manage stock, orders, suppliers, and operations from one system — no more spreadsheets or guesswork.</p>
+        <h3 data-zh="ERP 与库存管理">ERP &amp; Inventory Management</h3>
+        <p data-zh="一套系统统管库存、订单、供应商和运营 —— 告别表格与凭感觉决策。">Manage stock, orders, suppliers, and operations from one system — no more spreadsheets or guesswork.</p>
         <div class="srv-feats">
-          <div class="srv-feat">Real-time stock tracking</div>
-          <div class="srv-feat">Purchase order automation</div>
-          <div class="srv-feat">Multi-location warehouse support</div>
-          <div class="srv-feat">Supplier &amp; vendor management</div>
+          <div class="srv-feat" data-zh="实时库存追踪">Real-time stock tracking</div>
+          <div class="srv-feat" data-zh="采购订单自动化">Purchase order automation</div>
+          <div class="srv-feat" data-zh="多仓库地点支持">Multi-location warehouse support</div>
+          <div class="srv-feat" data-zh="供应商与厂商管理">Supplier &amp; vendor management</div>
         </div>
       </div>
 
       <div class="srv-card reveal">
         <div class="srv-icon">🤖</div>
-        <h3>AI Automation</h3>
-        <p>Reduce manual work with intelligent automation. Let AI handle repetitive tasks so your team can focus on growth.</p>
+        <h3 data-zh="AI 自动化">AI Automation</h3>
+        <p data-zh="用智能自动化减少人工，让 AI 处理重复任务，您的团队专注业务增长。">Reduce manual work with intelligent automation. Let AI handle repetitive tasks so your team can focus on growth.</p>
         <div class="srv-feats">
-          <div class="srv-feat">AI chatbot for customer support</div>
-          <div class="srv-feat">Automated report generation</div>
-          <div class="srv-feat">Smart data extraction (OCR)</div>
-          <div class="srv-feat">Workflow triggers &amp; scheduling</div>
+          <div class="srv-feat" data-zh="AI 客服聊天机器人">AI chatbot for customer support</div>
+          <div class="srv-feat" data-zh="报表自动生成">Automated report generation</div>
+          <div class="srv-feat" data-zh="智能数据提取（OCR）">Smart data extraction (OCR)</div>
+          <div class="srv-feat" data-zh="工作流触发与调度">Workflow triggers &amp; scheduling</div>
         </div>
       </div>
 
       <div class="srv-card reveal">
         <div class="srv-icon">💳</div>
-        <h3>POS &amp; Billing Systems</h3>
-        <p>Fast, reliable point-of-sale with real-time reporting, invoice management, and e-payment integration.</p>
+        <h3 data-zh="POS 与开票系统">POS &amp; Billing Systems</h3>
+        <p data-zh="快速可靠的 POS 收银，实时报表、发票管理、电子支付一体化。">Fast, reliable point-of-sale with real-time reporting, invoice management, and e-payment integration.</p>
         <div class="srv-feats">
-          <div class="srv-feat">Multi-payment method support</div>
-          <div class="srv-feat">Auto invoice &amp; receipt generation</div>
-          <div class="srv-feat">Daily sales reports</div>
-          <div class="srv-feat">Staff access control</div>
+          <div class="srv-feat" data-zh="多种支付方式支持">Multi-payment method support</div>
+          <div class="srv-feat" data-zh="自动生成发票与收据">Auto invoice &amp; receipt generation</div>
+          <div class="srv-feat" data-zh="每日销售报表">Daily sales reports</div>
+          <div class="srv-feat" data-zh="员工权限管理">Staff access control</div>
         </div>
       </div>
 
       <div class="srv-card reveal">
         <div class="srv-icon">📈</div>
-        <h3>Custom Dashboards</h3>
-        <p>Real-time business intelligence dashboards that give instant visibility into your operations and KPIs.</p>
+        <h3 data-zh="定制数据看板">Custom Dashboards</h3>
+        <p data-zh="实时商业智能看板，让运营状况与关键指标一目了然。">Real-time business intelligence dashboards that give instant visibility into your operations and KPIs.</p>
         <div class="srv-feats">
-          <div class="srv-feat">Live KPI monitoring</div>
-          <div class="srv-feat">Multi-source data integration</div>
-          <div class="srv-feat">Role-based access control</div>
-          <div class="srv-feat">Mobile-friendly interface</div>
+          <div class="srv-feat" data-zh="KPI 实时监控">Live KPI monitoring</div>
+          <div class="srv-feat" data-zh="多数据源整合">Multi-source data integration</div>
+          <div class="srv-feat" data-zh="按角色权限管控">Role-based access control</div>
+          <div class="srv-feat" data-zh="适配移动端">Mobile-friendly interface</div>
         </div>
       </div>
 
       <div class="srv-card reveal">
         <div class="srv-icon">🌐</div>
-        <h3>Business Websites</h3>
-        <p>Professional, fast, conversion-optimized websites that represent your brand and consistently generate leads.</p>
+        <h3 data-zh="企业官网">Business Websites</h3>
+        <p data-zh="专业、快速、转化优化的官网，代表您的品牌，持续带来客户线索。">Professional, fast, conversion-optimized websites that represent your brand and consistently generate leads.</p>
         <div class="srv-feats">
-          <div class="srv-feat">Mobile-first responsive design</div>
-          <div class="srv-feat">SEO optimized</div>
-          <div class="srv-feat">CMS for easy content updates</div>
-          <div class="srv-feat">Contact form &amp; lead capture</div>
+          <div class="srv-feat" data-zh="移动优先响应式设计">Mobile-first responsive design</div>
+          <div class="srv-feat" data-zh="SEO 优化">SEO optimized</div>
+          <div class="srv-feat" data-zh="CMS 后台便于内容更新">CMS for easy content updates</div>
+          <div class="srv-feat" data-zh="联系表单与线索收集">Contact form &amp; lead capture</div>
         </div>
       </div>
 
@@ -733,9 +753,9 @@
 <section id="showcase">
   <div class="container">
     <div class="sec-head reveal" style="text-align:center;max-width:500px;margin:0 auto 56px;">
-      <div class="label">Our Work</div>
-      <h2>Systems that make businesses run better</h2>
-      <p>Every project is custom-built from scratch. No templates, no shortcuts.</p>
+      <div class="label" data-zh="案例展示">Our Work</div>
+      <h2 data-zh="让企业运转更高效的系统">Systems that make businesses run better</h2>
+      <p data-zh="每个项目都从零开始定制。不套模板，不走捷径。">Every project is custom-built from scratch. No templates, no shortcuts.</p>
     </div>
     <div class="show-grid">
 
@@ -756,19 +776,19 @@
               <div class="m-stat-row">
                 <div class="m-stat">
                   <div class="m-stat-v">RM 284K</div>
-                  <div class="m-stat-l">Monthly Revenue</div>
+                  <div class="m-stat-l" data-zh="月度营收">Monthly Revenue</div>
                 </div>
                 <div class="m-stat">
                   <div class="m-stat-v">1,284</div>
-                  <div class="m-stat-l">Total Customers</div>
+                  <div class="m-stat-l" data-zh="客户总数">Total Customers</div>
                 </div>
                 <div class="m-stat">
                   <div class="m-stat-v" style="color:var(--green)">94%</div>
-                  <div class="m-stat-l">Retention Rate</div>
+                  <div class="m-stat-l" data-zh="客户留存率">Retention Rate</div>
                 </div>
                 <div class="m-stat">
                   <div class="m-stat-v">47</div>
-                  <div class="m-stat-l">Active Leads</div>
+                  <div class="m-stat-l" data-zh="活跃线索">Active Leads</div>
                 </div>
               </div>
               <div class="m-table">
@@ -776,34 +796,34 @@
                   <div class="m-dot" style="background:var(--accent)"></div>
                   <div class="m-line" style="max-width:140px"></div>
                   <div class="m-line" style="max-width:80px"></div>
-                  <div class="m-badge">Active</div>
+                  <div class="m-badge" data-zh="活跃">Active</div>
                 </div>
                 <div class="m-row">
                   <div class="m-dot"></div>
                   <div class="m-line" style="max-width:160px"></div>
                   <div class="m-line" style="max-width:60px"></div>
-                  <div class="m-badge">Active</div>
+                  <div class="m-badge" data-zh="活跃">Active</div>
                 </div>
                 <div class="m-row">
                   <div class="m-dot" style="background:var(--yellow)"></div>
                   <div class="m-line" style="max-width:110px"></div>
                   <div class="m-line" style="max-width:90px"></div>
-                  <div class="m-badge warn">Pending</div>
+                  <div class="m-badge warn" data-zh="待处理">Pending</div>
                 </div>
                 <div class="m-row">
                   <div class="m-dot"></div>
                   <div class="m-line" style="max-width:150px"></div>
                   <div class="m-line" style="max-width:70px"></div>
-                  <div class="m-badge">Active</div>
+                  <div class="m-badge" data-zh="活跃">Active</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="show-info">
-          <div class="show-tag">CRM System</div>
-          <h3>Customer Relationship Management Dashboard</h3>
-          <p>Full-stack CRM with lead tracking, sales pipeline, follow-up automation, and revenue analytics — built for a wholesale distribution company in KL.</p>
+          <div class="show-tag" data-zh="CRM 系统">CRM System</div>
+          <h3 data-zh="客户关系管理看板">Customer Relationship Management Dashboard</h3>
+          <p data-zh="全栈 CRM，含线索追踪、销售管道、跟进自动化与营收分析 —— 为吉隆坡某批发分销企业打造。">Full-stack CRM with lead tracking, sales pipeline, follow-up automation, and revenue analytics — built for a wholesale distribution company in KL.</p>
         </div>
       </div>
 
@@ -812,8 +832,8 @@
         <div class="mock-area">
           <div class="m-chart">
             <div class="m-chart-head">
-              <span>Stock Level Overview</span>
-              <span style="color:var(--accent)">This Week ↑12%</span>
+              <span data-zh="库存水平概览">Stock Level Overview</span>
+              <span style="color:var(--accent)" data-zh="本周 ↑12%">This Week ↑12%</span>
             </div>
             <div class="m-bars">
               <div class="m-bar" style="height:42%"></div>
@@ -827,23 +847,23 @@
             <div class="m-mini-row">
               <div class="m-mini">
                 <div class="m-mini-v" style="color:var(--green)">843</div>
-                <div class="m-mini-l">SKUs Tracked</div>
+                <div class="m-mini-l" data-zh="SKU 跟踪数">SKUs Tracked</div>
               </div>
               <div class="m-mini">
                 <div class="m-mini-v" style="color:var(--yellow)">12</div>
-                <div class="m-mini-l">Low Stock Alert</div>
+                <div class="m-mini-l" data-zh="低库存预警">Low Stock Alert</div>
               </div>
               <div class="m-mini">
                 <div class="m-mini-v">3</div>
-                <div class="m-mini-l">Warehouses</div>
+                <div class="m-mini-l" data-zh="仓库数量">Warehouses</div>
               </div>
             </div>
           </div>
         </div>
         <div class="show-info">
-          <div class="show-tag">ERP System</div>
-          <h3>Inventory &amp; Warehouse Management</h3>
-          <p>Real-time stock tracking across multiple warehouses, auto purchase order triggers, and supplier management.</p>
+          <div class="show-tag" data-zh="ERP 系统">ERP System</div>
+          <h3 data-zh="库存与仓储管理">Inventory &amp; Warehouse Management</h3>
+          <p data-zh="多仓库实时库存追踪、自动触发采购订单、供应商集中管理。">Real-time stock tracking across multiple warehouses, auto purchase order triggers, and supplier management.</p>
         </div>
       </div>
 
@@ -854,21 +874,21 @@
             <div class="m-chat-head">
               <div class="m-avatar">🤖</div>
               <div>
-                <div class="m-chat-name">AI Assistant</div>
-                <div class="m-online">● Online 24/7</div>
+                <div class="m-chat-name" data-zh="AI 助手">AI Assistant</div>
+                <div class="m-online" data-zh="● 7×24 在线">● Online 24/7</div>
               </div>
             </div>
             <div class="m-msgs">
-              <div class="m-msg">Hi! How can I help your business today?</div>
-              <div class="m-msg me">What's the stock for Product A?</div>
-              <div class="m-msg">Product A: <strong style="color:var(--text)">284 units</strong> in stock. Reorder at 50 units. Next delivery in <strong style="color:var(--text)">3 days</strong>. 📦</div>
+              <div class="m-msg" data-zh="您好！今天我能帮您什么忙？">Hi! How can I help your business today?</div>
+              <div class="m-msg me" data-zh="A 产品的库存还有多少？">What's the stock for Product A?</div>
+              <div class="m-msg" data-zh="A 产品：库存 <strong style=&quot;color:var(--text)&quot;>284 件</strong>，安全库存 50 件。下批到货 <strong style=&quot;color:var(--text)&quot;>3 天后</strong>。📦">Product A: <strong style="color:var(--text)">284 units</strong> in stock. Reorder at 50 units. Next delivery in <strong style="color:var(--text)">3 days</strong>. 📦</div>
             </div>
           </div>
         </div>
         <div class="show-info">
-          <div class="show-tag">AI Automation</div>
-          <h3>AI Business Assistant &amp; Chatbot</h3>
-          <p>Intelligent chatbot connected to live business data — answers queries, generates reports, and handles customer enquiries 24/7.</p>
+          <div class="show-tag" data-zh="AI 自动化">AI Automation</div>
+          <h3 data-zh="AI 商业助手 / 聊天机器人">AI Business Assistant &amp; Chatbot</h3>
+          <p data-zh="对接业务实时数据的智能聊天机器人 —— 7×24 回答咨询、生成报表、处理客户问询。">Intelligent chatbot connected to live business data — answers queries, generates reports, and handles customer enquiries 24/7.</p>
         </div>
       </div>
 
@@ -882,13 +902,13 @@
     <div class="proc-wrap">
 
       <div class="reveal">
-        <div class="label">How We Work</div>
-        <h2 style="font-size:clamp(28px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px;">Simple process,<br>zero surprises</h2>
-        <p style="color:var(--text2);font-size:16px;line-height:1.75;max-width:380px;">Structured and transparent — so you always know what's happening and when it'll be done. No delays, no hidden costs.</p>
+        <div class="label" data-zh="我们如何工作">How We Work</div>
+        <h2 style="font-size:clamp(28px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px;" data-zh="流程清晰，<br>绝无意外">Simple process,<br>zero surprises</h2>
+        <p style="color:var(--text2);font-size:16px;line-height:1.75;max-width:380px;" data-zh="结构化、透明 —— 让您随时清楚进度。绝不拖延，绝无隐藏费用。">Structured and transparent — so you always know what's happening and when it'll be done. No delays, no hidden costs.</p>
         <div style="margin-top:32px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:24px;">
-          <div style="font-size:13px;color:var(--text2);margin-bottom:10px;font-weight:600;">Typical project timeline</div>
-          <div style="font-size:30px;font-weight:900;letter-spacing:-1px;margin-bottom:4px;">3 – 8 Weeks</div>
-          <div style="font-size:13px;color:var(--text2);">From requirement discussion to live deployment</div>
+          <div style="font-size:13px;color:var(--text2);margin-bottom:10px;font-weight:600;" data-zh="项目典型周期">Typical project timeline</div>
+          <div style="font-size:30px;font-weight:900;letter-spacing:-1px;margin-bottom:4px;" data-zh="3 – 18 周">3 – 18 Weeks</div>
+          <div style="font-size:13px;color:var(--text2);" data-zh="从需求沟通到正式上线">From requirement discussion to live deployment</div>
         </div>
       </div>
 
@@ -896,41 +916,41 @@
         <div class="proc-step">
           <div class="step-num-wrap"><div class="step-n">01</div></div>
           <div>
-            <h3>Requirement Discussion</h3>
-            <p>Free consultation to understand your business, pain points, and goals — before writing a single line of code.</p>
-            <div class="step-dur">📅 1–2 days</div>
+            <h3 data-zh="需求沟通">Requirement Discussion</h3>
+            <p data-zh="免费咨询，深入了解您的业务、痛点与目标 —— 然后再开始任何开发。">Free consultation to understand your business, pain points, and goals — before writing a single line of code.</p>
+            <div class="step-dur" data-zh="📅 1–3 天">📅 1–3 days</div>
           </div>
         </div>
         <div class="proc-step">
           <div class="step-num-wrap"><div class="step-n">02</div></div>
           <div>
-            <h3>UI/UX Planning</h3>
-            <p>We design wireframes and user flows for your approval — you see exactly what you're getting before development starts.</p>
-            <div class="step-dur">📅 3–5 days</div>
+            <h3 data-zh="UI/UX 规划">UI/UX Planning</h3>
+            <p data-zh="我们设计原型与交互流程供您确认 —— 开发前您就能看到最终成品的样子。">We design wireframes and user flows for your approval — you see exactly what you're getting before development starts.</p>
+            <div class="step-dur" data-zh="📅 3–7 天">📅 3–7 days</div>
           </div>
         </div>
         <div class="proc-step">
           <div class="step-num-wrap"><div class="step-n">03</div></div>
           <div>
-            <h3>System Development</h3>
-            <p>We build your system with regular progress updates. Review at each milestone and request adjustments anytime.</p>
-            <div class="step-dur">📅 2–6 weeks</div>
+            <h3 data-zh="系统开发">System Development</h3>
+            <p data-zh="按里程碑迭代开发并定期同步进度，您可在任何节点提出调整。">We build your system with regular progress updates. Review at each milestone and request adjustments anytime.</p>
+            <div class="step-dur" data-zh="📅 2–15 周">📅 2–15 weeks</div>
           </div>
         </div>
         <div class="proc-step">
           <div class="step-num-wrap"><div class="step-n">04</div></div>
           <div>
-            <h3>Testing &amp; Deployment</h3>
-            <p>Thorough testing before going live. We handle server setup, deployment, and train your team to use the system.</p>
-            <div class="step-dur">📅 3–5 days</div>
+            <h3 data-zh="测试与部署">Testing &amp; Deployment</h3>
+            <p data-zh="上线前完整测试，由我们负责服务器配置、部署上线和团队培训。">Thorough testing before going live. We handle server setup, deployment, and train your team to use the system.</p>
+            <div class="step-dur" data-zh="📅 3–7 天">📅 3–7 days</div>
           </div>
         </div>
         <div class="proc-step">
           <div class="step-num-wrap"><div class="step-n">05</div></div>
           <div>
-            <h3>Long-Term Support</h3>
-            <p>We don't disappear after launch. Ongoing maintenance, bug fixes, and feature updates keep your system running.</p>
-            <div class="step-dur">📅 Ongoing</div>
+            <h3 data-zh="长期支持">Long-Term Support</h3>
+            <p data-zh="上线不是终点。我们提供长期维护、Bug 修复与功能迭代，让系统持续稳定运行。">We don't disappear after launch. Ongoing maintenance, bug fixes, and feature updates keep your system running.</p>
+            <div class="step-dur" data-zh="📅 持续">📅 Ongoing</div>
           </div>
         </div>
       </div>
@@ -943,43 +963,43 @@
 <section id="testimonials">
   <div class="container">
     <div class="sec-head reveal" style="text-align:center;max-width:500px;margin:0 auto 56px;">
-      <div class="label">Client Reviews</div>
-      <h2>Trusted by business owners across Malaysia</h2>
+      <div class="label" data-zh="客户评价">Client Reviews</div>
+      <h2 data-zh="赢得马来西亚各地企业主的信赖">Trusted by business owners across Malaysia</h2>
     </div>
     <div class="test-grid">
 
       <div class="test-card reveal">
         <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="test-q">"Before this system, we were managing 500+ customers on Excel. Now everything is centralized and our sales team closes deals 40% faster. Best investment we've made."</p>
+        <p class="test-q" data-zh="“以前我们用 Excel 管理 500+ 客户。现在数据集中了，销售团队成交速度提升 40%。这是我们做过最值的投资。”">"Before this system, we were managing 500+ customers on Excel. Now everything is centralized and our sales team closes deals 40% faster. Best investment we've made."</p>
         <div class="test-author">
           <div class="t-avatar">JL</div>
           <div>
             <div class="t-name">Jason Lim</div>
-            <div class="t-info">Director · Wholesale Distribution, KL</div>
+            <div class="t-info" data-zh="总监 · 吉隆坡批发分销公司">Director · Wholesale Distribution, KL</div>
           </div>
         </div>
       </div>
 
       <div class="test-card reveal">
         <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="test-q">"The inventory system completely transformed our warehouse. Stock discrepancies dropped from 8% to near zero. Kelvin delivered on time and within budget."</p>
+        <p class="test-q" data-zh="“库存系统彻底改造了我们的仓库管理。库存误差从 8% 降到接近 0。Kelvin 按时按预算交付，非常专业。”">"The inventory system completely transformed our warehouse. Stock discrepancies dropped from 8% to near zero. Kelvin delivered on time and within budget."</p>
         <div class="test-author">
           <div class="t-avatar">ST</div>
           <div>
             <div class="t-name">Sarah Tan</div>
-            <div class="t-info">Operations Manager · Manufacturing, Penang</div>
+            <div class="t-info" data-zh="运营经理 · 槟城制造业">Operations Manager · Manufacturing, Penang</div>
           </div>
         </div>
       </div>
 
       <div class="test-card reveal">
         <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="test-q">"The AI chatbot handles 70% of our customer enquiries automatically. Our support team now focuses on complex issues. Very professional — highly recommended."</p>
+        <p class="test-q" data-zh="“AI 聊天机器人自动处理了我们 70% 的客户咨询，客服团队可以专注于复杂问题。非常专业，强烈推荐。”">"The AI chatbot handles 70% of our customer enquiries automatically. Our support team now focuses on complex issues. Very professional — highly recommended."</p>
         <div class="test-author">
           <div class="t-avatar">AC</div>
           <div>
             <div class="t-name">Alan Chong</div>
-            <div class="t-info">CEO · E-Commerce Platform, Johor</div>
+            <div class="t-info" data-zh="CEO · 柔佛电商平台">CEO · E-Commerce Platform, Johor</div>
           </div>
         </div>
       </div>
@@ -994,39 +1014,39 @@
     <div class="faq-wrap">
 
       <div class="reveal">
-        <div class="label">FAQ</div>
-        <h2 style="font-size:clamp(28px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px;">Common questions,<br>answered honestly</h2>
-        <p style="color:var(--text2);font-size:15px;line-height:1.75;max-width:340px;margin-bottom:28px;">Still have questions? We're happy to chat — no commitment, no pressure.</p>
-        <a href="https://wa.me/601XXXXXXXX" class="btn-wa" style="display:inline-flex;">
+        <div class="label" data-zh="常见问题">FAQ</div>
+        <h2 style="font-size:clamp(28px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px;" data-zh="常见问题，<br>坦诚回答">Common questions,<br>answered honestly</h2>
+        <p style="color:var(--text2);font-size:15px;line-height:1.75;max-width:340px;margin-bottom:28px;" data-zh="还有疑问？欢迎随时聊聊 —— 不收押金、不施压力。">Still have questions? We're happy to chat — no commitment, no pressure.</p>
+        <a href="https://wa.me/60168623902" class="btn-wa" style="display:inline-flex;">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Ask on WhatsApp
+          <span data-zh="WhatsApp 咨询">Ask on WhatsApp</span>
         </a>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q">How long does a project take? <span class="plus">+</span></button>
-          <div class="faq-a">Most projects complete within 3–8 weeks depending on complexity. A simple internal tool may take 2–3 weeks, while a full ERP or CRM system typically takes 6–10 weeks. We give you a clear timeline before we start.</div>
+          <button class="faq-q"><span data-zh="一个项目通常需要多久？">How long does a project take?</span> <span class="plus">+</span></button>
+          <div class="faq-a" data-zh="多数项目在 3–18 周内完成，具体取决于复杂度。简单的内部工具一般 2–3 周；完整的 ERP 或 CRM 系统通常需要 8–18 周。开工前我们会给出明确的时间表。">Most projects complete within 3–18 weeks depending on complexity. A simple internal tool may take 2–3 weeks, while a full ERP or CRM system typically takes 8–18 weeks. We give you a clear timeline before we start.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">How much does a custom system cost? <span class="plus">+</span></button>
-          <div class="faq-a">We offer transparent fixed-price quotes after a requirement discussion — no hidden fees. Simple systems start from RM 3,000; enterprise systems typically range from RM 10,000–50,000+.</div>
+          <button class="faq-q"><span data-zh="定制一套系统大概多少钱？">How much does a custom system cost?</span> <span class="plus">+</span></button>
+          <div class="faq-a" data-zh="需求沟通后我们会给出透明的固定报价 —— 没有隐藏费用。简单系统起步 RM 3,000；企业级系统通常在 RM 10,000–50,000+ 之间。">We offer transparent fixed-price quotes after a requirement discussion — no hidden fees. Simple systems start from RM 3,000; enterprise systems typically range from RM 10,000–50,000+.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Will you train my team after deployment? <span class="plus">+</span></button>
-          <div class="faq-a">Yes. Every project includes system training — documentation, walkthrough sessions, and ongoing WhatsApp support after launch. We make sure your team is confident using the system.</div>
+          <button class="faq-q"><span data-zh="上线后会培训我的团队吗？">Will you train my team after deployment?</span> <span class="plus">+</span></button>
+          <div class="faq-a" data-zh="会。每个项目都包含系统培训 —— 文档、操作演示，以及上线后的 WhatsApp 持续支持，确保您的团队能熟练使用系统。">Yes. Every project includes system training — documentation, walkthrough sessions, and ongoing WhatsApp support after launch. We make sure your team is confident using the system.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Do you provide long-term maintenance? <span class="plus">+</span></button>
-          <div class="faq-a">Absolutely. We offer monthly maintenance plans that include bug fixes, updates, and feature enhancements. We build long-term partnerships with our clients — not just one-off projects.</div>
+          <button class="faq-q"><span data-zh="提供长期维护服务吗？">Do you provide long-term maintenance?</span> <span class="plus">+</span></button>
+          <div class="faq-a" data-zh="当然。我们提供按月维护方案，包括 Bug 修复、更新和功能增强。我们与客户建立长期合作关系 —— 而不是一次性交付。">Absolutely. We offer monthly maintenance plans that include bug fixes, updates, and feature enhancements. We build long-term partnerships with our clients — not just one-off projects.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Can you integrate with my existing software? <span class="plus">+</span></button>
-          <div class="faq-a">Yes. We integrate with most existing systems — accounting software (QuickBooks, SQL), e-commerce (Shopify, Lazada), messaging (WhatsApp, Telegram), payment gateways, and more.</div>
+          <button class="faq-q"><span data-zh="可以对接我现有的软件吗？">Can you integrate with my existing software?</span> <span class="plus">+</span></button>
+          <div class="faq-a" data-zh="可以。我们支持与大多数现有系统对接 —— 财务软件（QuickBooks、SQL）、电商平台（Shopify、Lazada）、即时通讯（WhatsApp、Telegram）、支付网关等等。">Yes. We integrate with most existing systems — accounting software (QuickBooks, SQL), e-commerce (Shopify, Lazada), messaging (WhatsApp, Telegram), payment gateways, and more.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">What if I need changes after launch? <span class="plus">+</span></button>
-          <div class="faq-a">We handle post-launch changes promptly. Minor tweaks within scope are covered. For larger enhancements, we provide transparent quotes with no surprise charges.</div>
+          <button class="faq-q"><span data-zh="上线后如果需要改动怎么办？">What if I need changes after launch?</span> <span class="plus">+</span></button>
+          <div class="faq-a" data-zh="我们会快速处理上线后的调整。小范围内的修改包含在维护中；较大的增强功能我们会给出透明报价，绝无意外收费。">We handle post-launch changes promptly. Minor tweaks within scope are covered. For larger enhancements, we provide transparent quotes with no surprise charges.</div>
         </div>
       </div>
     </div>
@@ -1037,15 +1057,15 @@
 <section id="cta">
   <div class="container">
     <div class="cta-box reveal">
-      <div class="label" style="justify-content:center;">Start Today</div>
-      <h2>Ready to build your<br>business system?</h2>
-      <p>Book a free 30-minute consultation. No commitment, no hard sell — just an honest conversation about what you need.</p>
+      <div class="label" style="justify-content:center;" data-zh="立即开始">Start Today</div>
+      <h2 data-zh="准备好打造<br>您的业务系统了吗？">Ready to build your<br>business system?</h2>
+      <p data-zh="预约免费 30 分钟咨询。不收押金、不强推销 —— 我们只想了解您的真实需求。">Book a free 30-minute consultation. No commitment, no hard sell — just an honest conversation about what you need.</p>
       <div class="cta-acts">
-        <a href="https://wa.me/601XXXXXXXX?text=Hi%20Kelvin%2C%20I%27d%20like%20a%20free%20consultation%20about%20my%20project." class="btn-wa">
+        <a href="https://wa.me/60168623902?text=Hi%20Kelvin%2C%20I%27d%20like%20a%20free%20consultation%20about%20my%20project." class="btn-wa">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Get Free Consultation
+          <span data-zh="预约免费咨询">Get Free Consultation</span>
         </a>
-        <a href="mailto:pengwenkai@hotmail.com" class="btn-outline">✉️ Send Email</a>
+        <a href="mailto:pengwenkai@hotmail.com" class="btn-outline" data-zh="✉️ 发送邮件">✉️ Send Email</a>
       </div>
     </div>
   </div>
@@ -1056,19 +1076,19 @@
   <div class="foot-inner">
     <a href="#" class="foot-logo">Kelvin<span>.</span></a>
     <ul class="foot-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#showcase">Work</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#services" data-zh="服务">Services</a></li>
+      <li><a href="#showcase" data-zh="案例">Work</a></li>
+      <li><a href="#process" data-zh="流程">Process</a></li>
+      <li><a href="#faq" data-zh="常见问题">FAQ</a></li>
     </ul>
-    <p class="foot-copy">© 2026 Kelvin Peng. All rights reserved.</p>
+    <p class="foot-copy" data-zh="© 2026 Kelvin Peng. 保留所有权利。">© 2026 Kelvin Peng. All rights reserved.</p>
   </div>
 </footer>
 
 <!-- ══ WHATSAPP FLOAT ════════════════════════════ -->
 <div class="wa-float">
-  <div class="wa-tip" id="waTip">💬 Free consultation — chat now!</div>
-  <a href="https://wa.me/601XXXXXXXX?text=Hi%20Kelvin%2C%20I%27m%20interested%20in%20building%20a%20system%20for%20my%20business."
+  <div class="wa-tip" id="waTip" data-zh="💬 免费咨询 —— 立即对话！">💬 Free consultation — chat now!</div>
+  <a href="https://wa.me/60168623902?text=Hi%20Kelvin%2C%20I%27m%20interested%20in%20building%20a%20system%20for%20my%20business."
      class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -1078,6 +1098,37 @@
 
 <!-- ══ JS ═════════════════════════════════════════ -->
 <script>
+  // ── i18n: EN ⇄ ZH via data-zh attributes ────────────────────────
+  (function() {
+    const STORAGE_KEY = 'kp_lang';
+    const btn = document.getElementById('langToggle');
+    const els = document.querySelectorAll('[data-zh]');
+
+    // Snapshot each element's English innerHTML so we can swap back losslessly.
+    els.forEach(el => { el.dataset.en = el.innerHTML; });
+
+    function apply(lang) {
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      els.forEach(el => {
+        el.innerHTML = lang === 'zh' ? el.dataset.zh : el.dataset.en;
+      });
+      btn.textContent = lang === 'zh' ? 'EN' : '中文';
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    }
+
+    // Determine initial language: stored preference > browser language > 'en'
+    let initial = 'en';
+    try { initial = localStorage.getItem(STORAGE_KEY) || initial; } catch (e) {}
+    if (!localStorage.getItem(STORAGE_KEY) && /^zh/i.test(navigator.language || '')) {
+      initial = 'zh';
+    }
+    apply(initial);
+
+    btn.addEventListener('click', () => {
+      apply(document.documentElement.lang.startsWith('zh') ? 'en' : 'zh');
+    });
+  })();
+
   // Scroll reveal
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
